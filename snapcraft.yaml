@@ -1,0 +1,17 @@
+name: jarjar
+version: 0.0.0
+summary: The Wise Sayings of Jar Jar Binks
+description: jarjar prints a random saying of Jar Jar Binks
+confinement: strict
+grade: stable
+architectures: [ all ]
+
+parts:
+    jarjar:
+        plugin: nil
+        install: |
+            mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
+            cp jarjar $SNAPCRAFT_PART_INSTALL/bin/
+apps:
+    jarjar:
+        command: jarjar
