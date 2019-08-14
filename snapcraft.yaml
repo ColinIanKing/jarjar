@@ -1,5 +1,7 @@
 name: jarjar
-version: 0.0.0
+version: git
+version-script: |
+    echo $(git describe --tags)
 summary: The Wise Sayings of Jar Jar Binks
 description: jarjar prints a random saying of Jar Jar Binks
 confinement: strict
